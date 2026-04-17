@@ -131,7 +131,6 @@ eller:
 npm start
 ```
 
-
 ## 🛠️ Databasscript 
 
 - install.js – skapar databastabellen
@@ -141,7 +140,7 @@ npm start
 
 Webbtjänsten är publicerad via Render:
 
-[Öppna webbplatsen](Länk till webbtjänst läggs till efter publicering)
+[Öppna webbtjänsten](https://lab2-webbtjanst.onrender.com/)
 
 ## 📊 ER-diagram 
 

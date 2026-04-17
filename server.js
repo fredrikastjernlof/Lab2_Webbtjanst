@@ -18,7 +18,7 @@ app.use("/workexperience", workexperienceRoutes);
 
 // Test-route
 app.get('/', (req, res) => {
-    res.send('API is running, yippee-ki-yay, motherfu**er!🚀');
+    res.send('API is running! 🥳 Yippee-ki-yay, motherflowerpower!🚀🌺');
 });
 
 // Starta servern
