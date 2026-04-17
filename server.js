@@ -1,25 +1,10 @@
 //Importerar paket
 const express = require('express');
-const { Client } = require('pg');
 require('dotenv').config();
 const cors = require('cors');
 
-// Variabel för att koppla upp mot databasen
-const client = new Client({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: Number(process.env.DB_PORT),
-    ssl: {
-        rejectUnauthorized: false //Nödvändigt för databas genererad av Render, annars kan det leda till SSL-fel
-    },
-});
-
-// Koppla upp mot db
-client.connect()
-  .then(() => console.log("Connected to database!"))
-  .catch(err => console.error("Error connecting to the database:", err));
+//Läser in routes
+const workexperienceRoutes = require("./routes/workexperienceRoutes");
 
 // Expressinstans
 const app = express();
@@ -28,6 +13,9 @@ const app = express();
 app.use(cors()); // Tillåter cross-origin
 app.use(express.json()); // Parsa JSON-body
 
+//Routes
+app.use("/workexperience", workexperienceRoutes);
+
 // Test-route
 app.get('/', (req, res) => {
     res.send('API is running, yippee-ki-yay, motherfu**er!🚀');
@@ -35,3 +23,4 @@ app.get('/', (req, res) => {
 
 // Starta servern
 app.listen(process.env.PORT, () => console.log (`Server started, using port ${process.env.PORT}`));
+
