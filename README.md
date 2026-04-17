@@ -83,9 +83,9 @@ Ett objekt från databasen returneras/skickas som JSON med följande struktur:
 
 ## ✅ Validering
 
-Alla fält valideras innan lagring
-Tomma värden tillåts inte
-Tydliga felmeddelanden returneras vid felaktig input
+- Alla fält valideras innan lagring
+- Tomma värden tillåts inte
+- Tydliga felmeddelanden returneras vid felaktig input
 
 ## 🌍 CORS
 
